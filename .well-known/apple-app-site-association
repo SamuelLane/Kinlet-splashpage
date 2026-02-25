@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "X3H6DFQQ95.app.Kinlet",
+        "paths": ["/place/*"]
+      }
+    ]
+  }
+}
