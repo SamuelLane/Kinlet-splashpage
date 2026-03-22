@@ -113,7 +113,7 @@
 
     <main class="legal">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: February 21, 2026</p>
+        <p class="updated">Last updated: March 17, 2026</p>
 
         <p>Kinlet ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application ("the App"). Please read this policy carefully. By using the App, you agree to the collection and use of information in accordance with this policy.</p>
 
@@ -122,7 +122,8 @@
         <ul>
             <li><strong>Location Data:</strong> With your permission, we collect your device's location to provide location-based recommendations and features. You can disable location access through your device settings at any time.</li>
             <li><strong>Account Information:</strong> If you create an account, we may collect your name, email address, and profile information.</li>
-            <li><strong>Usage Data:</strong> We collect information about how you interact with the App, including pages viewed, features used, and actions taken.</li>
+            <li><strong>Content You Save:</strong> When you share links from other apps (such as Instagram, TikTok, or websites), the App saves the URL, page title, description, and image URL. Activities and recipes extracted from those links are also stored, including name, description, materials, steps, notes, and category.</li>
+            <li><strong>Preferences:</strong> During onboarding, you select your goals, engagement frequency, children's age ranges, and activity interests. These preferences are stored with your account.</li>
             <li><strong>Device Information:</strong> We may collect information about your device, including device type, operating system, and unique device identifiers.</li>
         </ul>
 
@@ -131,15 +132,22 @@
         <ul>
             <li>Provide, maintain, and improve the App and its features</li>
             <li>Deliver personalized, location-based recommendations</li>
+            <li>Process shared links using AI to extract activity, recipe, and location information</li>
             <li>Communicate with you about updates, support, and new features</li>
-            <li>Monitor and analyze usage trends to improve user experience</li>
             <li>Protect against fraud, unauthorized access, and other illegal activity</li>
         </ul>
 
         <h2>3. Sharing of Information</h2>
         <p>We do not sell your personal information. We may share your information only in the following circumstances:</p>
         <ul>
-            <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating the App, subject to confidentiality obligations.</li>
+            <li><strong>Service Providers:</strong> We share information with the following trusted third-party service providers who assist us in operating the App:
+                <ul>
+                    <li><strong>Supabase</strong> — cloud database and authentication. Hosts all user data.</li>
+                    <li><strong>Perplexity AI</strong> — processes shared URLs to extract activity, recipe, and location information. Receives the URL and page metadata (title, description, caption text). Does not receive your account information.</li>
+                    <li><strong>RevenueCat</strong> — manages subscriptions and in-app purchases. Receives an anonymous user identifier.</li>
+                    <li><strong>Apple</strong> — provides Sign in with Apple authentication.</li>
+                </ul>
+            </li>
             <li><strong>Legal Requirements:</strong> We may disclose information if required to do so by law or in response to valid requests by public authorities.</li>
             <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</li>
         </ul>
@@ -151,13 +159,21 @@
         <p>Kinlet is designed for use by parents and families. We do not knowingly collect or store personal information from anyone under the age of 18. The App is intended to be used by adults, including parents and guardians, to discover family-friendly activities and places. If you believe we have inadvertently collected information from someone under 18, please contact us immediately and we will take steps to delete it.</p>
 
         <h2>6. Third-Party Services</h2>
-        <p>The App may contain links to or integrate with third-party services, including social media platforms. We are not responsible for the privacy practices of these third-party services. We encourage you to read the privacy policies of any third-party services you interact with.</p>
+        <p>The App integrates with the following third-party services:</p>
+        <ul>
+            <li>Supabase (<a href="https://supabase.com">supabase.com</a>) — database and authentication</li>
+            <li>Perplexity AI (<a href="https://perplexity.ai">perplexity.ai</a>) — AI-powered content extraction</li>
+            <li>RevenueCat (<a href="https://revenuecat.com">revenuecat.com</a>) — subscription management</li>
+            <li>Apple Sign-In — authentication</li>
+        </ul>
+        <p>Shared URLs and AI extraction results may be cached on our servers for up to 7 days to improve performance. We are not responsible for the privacy practices of these third-party services. We encourage you to read the privacy policies of any third-party services you interact with.</p>
 
         <h2>7. Your Choices</h2>
         <p>You have the following choices regarding your information:</p>
         <ul>
             <li><strong>Location:</strong> You can enable or disable location services through your device settings.</li>
-            <li><strong>Account:</strong> You can update or delete your account information by contacting us.</li>
+            <li><strong>Account:</strong> You can delete your account directly within the App by going to Profile > Delete Account. This permanently removes your personal data. You can also update your account information within the App or by contacting us.</li>
+            <li><strong>Notifications:</strong> You can enable or disable push notifications through your device settings.</li>
             <li><strong>Communications:</strong> You can opt out of promotional communications by following the unsubscribe instructions in those messages.</li>
         </ul>
 
