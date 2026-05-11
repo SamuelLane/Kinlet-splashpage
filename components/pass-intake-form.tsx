@@ -285,11 +285,13 @@ export function PassIntakeForm({
   if (status === "success") {
     return (
       <div className="form-success">
-        <h3>Thanks — we got it.</h3>
+        <h3>We sent a confirmation!</h3>
         <p>
-          Check your inbox for a confirmation. We&apos;ll be in touch within a
-          few days.
+          Check your inbox — and if you don&apos;t see it within a few minutes,
+          check your spam or junk folder and mark it as &quot;Not spam&quot; so
+          future updates land in your inbox.
         </p>
+        <p>We&apos;ll be in touch within a few business days.</p>
       </div>
     );
   }
