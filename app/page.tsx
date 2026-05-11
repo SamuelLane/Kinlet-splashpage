@@ -67,7 +67,7 @@ export default function Home() {
             </h2>
             <p>
               A pocketful of exclusive offers from the family-friendly spots
-              your kids already love. One pass, every adventure.
+              your kids already love. One app, every adventure.
             </p>
             <Link href="/partners" className="perks-tease-cta">
               Become a partner

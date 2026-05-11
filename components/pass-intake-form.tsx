@@ -558,7 +558,7 @@ export function PassIntakeForm({
           }
         />
         <span>
-          I&apos;d like to receive updates about Kinlet Pass and launch news.
+          I&apos;d like to receive updates about Kinlet Perks and launch news.
         </span>
       </label>
 
@@ -676,7 +676,7 @@ function LocationCard({
 
       <div className="form-field">
         <Label htmlFor={`loc-offer-${index}`}>
-          What offer are you providing Pass holders?
+          What offer are you providing Kinlet families?
         </Label>
         <Textarea
           id={`loc-offer-${index}`}
