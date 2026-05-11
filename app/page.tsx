@@ -51,7 +51,7 @@ export default function Home() {
               <IPhoneMockup
                 model="15-pro"
                 color="natural-titanium"
-                wallpaper="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop"
+                wallpaper="/app-home-screenshot.png"
               />
             </div>
           </div>

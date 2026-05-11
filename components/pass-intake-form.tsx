@@ -61,6 +61,13 @@ const WEEKDAY_OPTIONS: Array<{
   { value: "sun", label: "Sun" },
 ];
 
+const CADENCE_LABELS: Record<string, string> = {
+  every_visit: "Every visit",
+  monthly: "Once a month",
+  quarterly: "Once every three months",
+  yearly: "Once a year",
+};
+
 const POS_OPTIONS: Array<{ value: (typeof posSystems)[number]; label: string }> =
   [
     { value: "square", label: "Square" },
@@ -77,8 +84,16 @@ const POS_OPTIONS: Array<{ value: (typeof posSystems)[number]; label: string }> 
     { value: "other", label: "Other" },
   ];
 
-export function PassIntakeForm() {
+export function PassIntakeForm({
+  onStatusChange,
+}: {
+  onStatusChange?: (status: Status) => void;
+} = {}) {
   const [status, setStatus] = useState<Status>("idle");
+
+  useEffect(() => {
+    onStatusChange?.(status);
+  }, [status, onStatusChange]);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [logoFile, setLogoFile] = useState<File | null>(null);
   const [logoPreview, setLogoPreview] = useState<string | null>(null);
@@ -715,7 +730,9 @@ function LocationCard({
           disabled={index > 0}
         >
           <SelectTrigger>
-            <SelectValue placeholder="Pick one" />
+            <SelectValue placeholder="Pick one">
+              {cadence ? CADENCE_LABELS[cadence] : null}
+            </SelectValue>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="every_visit">Every visit</SelectItem>
@@ -760,7 +777,12 @@ function LocationCard({
             }
           >
             <SelectTrigger>
-              <SelectValue placeholder="Pick one" />
+              <SelectValue placeholder="Pick one">
+                {posSystem
+                  ? (POS_OPTIONS.find((o) => o.value === posSystem)?.label ??
+                    null)
+                  : null}
+              </SelectValue>
             </SelectTrigger>
             <SelectContent>
               {POS_OPTIONS.map((opt) => (

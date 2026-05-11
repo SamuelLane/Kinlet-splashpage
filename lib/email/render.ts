@@ -72,12 +72,11 @@ function nl2br(value: string) {
 }
 
 function businessTypeLabel(submission: PassIntakeInput) {
-  if (submission.business_type === "other" && submission.business_type_other) {
+  const type = submission.business_type ?? "";
+  if (type === "other" && submission.business_type_other) {
     return submission.business_type_other;
   }
-  return (
-    businessTypeLabels[submission.business_type] ?? submission.business_type
-  );
+  return businessTypeLabels[type] ?? type;
 }
 
 function posLabel(loc: LocationInput): string | null {

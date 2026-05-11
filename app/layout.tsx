@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   title: "Kinlet — Family Adventures, Simplified",
   description:
     "Kinlet helps families discover kid-friendly places, activities, and hidden gems nearby. Less planning, more exploring.",
-  icons: { icon: "/logo.png" },
   other: {
     "facebook-domain-verification": "mch7g0zjaqtd4oyc1o4x9zkzcd6uz6",
   },

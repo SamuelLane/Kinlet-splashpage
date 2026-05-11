@@ -88,7 +88,7 @@ export async function POST(request: Request) {
       submitter_email: submission.submitter_email,
       submitter_role: submission.submitter_role,
       business_name: submission.business_name,
-      business_type: submission.business_type,
+      business_type: submission.business_type!,
       business_type_other: submission.business_type_other ?? null,
       business_website: submission.business_website ?? null,
       business_phone: submission.business_phone ?? null,

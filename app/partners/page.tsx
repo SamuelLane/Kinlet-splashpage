@@ -1,13 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { PassIntakeForm } from "@/components/pass-intake-form";
 
-export const metadata = {
-  title: "Become a Kinlet Perks partner",
-  description:
-    "Free, zero-risk advertising to engaged local families. Apply to become a Kinlet Perks partner.",
-};
-
 export default function PartnersPage() {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <>
       <nav className="site-nav">
@@ -25,7 +24,7 @@ export default function PartnersPage() {
       <main className="partners-page">
         <div className="partners-page-inner">
           <Link href="/" className="partners-back">
-            ← Back to home
+            ← Back
           </Link>
 
           <section className="partners-hero">
@@ -38,16 +37,21 @@ export default function PartnersPage() {
               businesses, delivered straight to parents inside the Kinlet app.
               You design the deal, we send engaged local families your way.
             </p>
-
           </section>
 
           <div className="cta-box cta-box-form">
-            <h2>Apply to become a partner</h2>
-            <p>
-              Tell us about your business and the offer you&apos;d like to run.
-              We&apos;ll be in touch within a few business days.
-            </p>
-            <PassIntakeForm />
+            {!submitted && (
+              <>
+                <h2>Apply to become a partner</h2>
+                <p>
+                  Tell us about your business and the offer you&apos;d like to
+                  run. We&apos;ll be in touch within a few business days.
+                </p>
+              </>
+            )}
+            <PassIntakeForm
+              onStatusChange={(status) => setSubmitted(status === "success")}
+            />
           </div>
         </div>
       </main>

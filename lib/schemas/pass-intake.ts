@@ -81,7 +81,7 @@ export const passIntakeSchema = z
     submitter_email: z.string().email("Enter a valid email"),
     submitter_role: z.string().min(1, "Required").max(100),
     business_name: z.string().min(1, "Required").max(150),
-    business_type: z.enum(businessTypes),
+    business_type: z.enum(businessTypes).optional(),
     business_type_other: z.string().max(100).optional(),
     business_website: z.string().max(200).optional(),
     business_phone: z.string().max(50).optional(),
@@ -98,6 +98,13 @@ export const passIntakeSchema = z
       .max(MAX_LOCATIONS, `Maximum ${MAX_LOCATIONS} locations`),
   })
   .superRefine((data, ctx) => {
+    if (!data.business_type) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["business_type"],
+        message: "Required",
+      });
+    }
     if (
       data.business_type === "other" &&
       !(data.business_type_other && data.business_type_other.length > 0)
