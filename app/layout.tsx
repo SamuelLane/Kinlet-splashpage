@@ -3,6 +3,7 @@ import { DM_Sans, Nunito, Geist } from "next/font/google";
 import { Agentation } from "agentation";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { PostHogProvider } from "@/components/posthog-provider";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(dmSans.variable, nunito.variable, "font-sans", geist.variable)}>
       <body>
+        <PostHogProvider />
         {children}
         {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
